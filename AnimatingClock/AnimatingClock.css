@@ -1,0 +1,28 @@
+#content{
+    background-color: #3F51B5;
+    color: white;
+    width: 100%;
+}
+#maincontent{
+    justify-content: center;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 200px;
+}
+#clockLayout{
+    border: 15px solid white;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+}
+.hand{
+    background-color: white;
+    width: 9%;
+    position: absolute;
+    height: 5px;
+    top: 400px;
+    margin-left: 2%;
+    transform-origin: 99%;
+    transform: rotate(90deg);
+}
