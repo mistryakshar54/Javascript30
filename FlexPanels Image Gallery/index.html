@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css" />
+
+</head>
+
+<body id="content">
+    <div id="maincontent">
+        <div id="galleryLayout">
+            <div id="panel1" class="panel">
+                <p>Explore</p>
+                <p>Nature</p>
+                <p>True form</p>
+            </div>
+            <div id="panel2" class="panel">
+                <p>Architecture that</p>
+                <p>Amazes</p>
+                <p>everyone!</p>
+            </div>
+            <div id="panel3" class="panel">
+                <p>Dishes the way</p>
+                <p>Everyone</p>
+                <p>Loves it!!</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="./AnimatingClock.js"></script> -->
+<script>
+    const panels = document.querySelectorAll('.panel');
+    function toggleActive() {
+        this.classList.toggle('active');
+    }
+    panels.forEach(element => {
+        element.addEventListener('click' , toggleActive);
+    });
+</script>
+</html>
