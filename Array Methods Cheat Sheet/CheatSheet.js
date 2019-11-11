@@ -21,70 +21,72 @@ console.log("Array after applying map" , newArray);
 
 var empArr = [
   {
-    ID: "1",
-    name: "William"
+    ID: 1231,
+    name: "William",
+    age : 28
   },
   {
-    ID: "2",
-    name: "Olivia"
+    ID: 2232,
+    name: "Olivia",
+    age : 36
   },
   {
-    ID: "3",
-    name: "Irene"
+    ID: 3464,
+    name: "Irene",
+    age : 30
   },
   {
-    ID: "4",
-    name: "Greta"
+    ID: 4564,
+    name: "Greta",
+    age : 42
   },
   {
-    ID: "5",
-    name: "Teagan"
+    ID: 5743,
+    name: "Teagan",
+    age : 45
   },
   {
-    ID: "6",
-    name: "Elly"
+    ID: 6465,
+    name: "Elly",
+    age : 24
   },
   {
-    ID: "7",
-    name: "Alessandra"
+    ID: 7342,
+    name: "Alessandra",
+    age : 56
   },
   {
-    ID: "8",
-    name: "Shay"
+    ID: 2853,
+    name: "Shay",
+    age : 33
   },
   {
-    ID: "9",
-    name: "Daron"
+    ID: 1649,
+    name: "Daron",
+    age : 23
   },
   {
-    ID: "10",
-    name: "Ramon"
-  },
-  {
-    ID: "11",
-    name: "Barry"
-  },
-  {
-    ID: "12",
-    name: "Angelina"
-  },
-  {
-    ID: "13",
-    name: "Josh"
-  },
-  {
-    ID: "14",
-    name: "Ethan"
-  },
-  {
-    ID: "15",
-    name: "Alessia"
+    ID: 1049,
+    name: "Ramon",
+    age : 27
   }
 ];
 //Array.prototype.sort()
 
 //USE:  Sort the array.
-//NOTE: It doesnot mutate the original array!! Map always returns a new Array.
+//NOTE: It doesnot mutate the original array!! Sort always returns a new Array.
 
 const sortedArr = empArr.sort((emp1 , emp2) => (emp1.name > emp2.name) ? 1 : -1 );
 console.log("Array after applying sort", sortedArr);
+
+//Array.prototype.some()
+//USE:  Find if some elements of the array meets the given criteria.
+
+const  someYoungPeople = empArr.some( ( emp => emp.age <= 25 ) );
+console.log("Are there some employees below 25 years?: " , someYoungPeople );
+
+
+//Array.prototype.findByIndex()
+//USE:  Find the index of the array item that meets the given criteria.
+const  indexToSearch = empArr.findIndex( ( emp => emp.ID === 2853 ) );
+console.log("Index of emp no 2853: ", indexToSearch);
