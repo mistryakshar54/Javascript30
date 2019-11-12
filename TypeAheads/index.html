@@ -8,13 +8,10 @@
 <body id="content">
     <div id="maincontent">
         <h1>Search for a country..</h1>
-        <input type="text" id="searchInput" autocomplete="off" />
+        <input onkeyup="searchData(this.value)" type="text" id="searchInput" autocomplete="off" />
         <ul id="searchInputList" class="suggestionslist">
-            <li class="list-item">Sample 1</li>
-            <li class="list-item">Sample 2</li>
-            <li class="list-item">Sample 1</li>
-            <li class="list-item">Sample 2</li>
         </ul>
+        <h1 id="ErrorMsg">lol</h1>
     </div>
 </body>
 <script src="./index.js"></script>
