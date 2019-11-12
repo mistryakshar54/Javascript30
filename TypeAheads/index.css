@@ -1,0 +1,41 @@
+body{
+    background-color: crimson;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    display: flex;
+}
+#maincontent{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+#searchInput{
+    margin: 0px;
+    height: 8%;
+    width: 35%;
+    padding: 0% 1%;
+    font-size: 1.5em;
+}
+.suggestionslist {
+    list-style-type: none;
+    margin: 2px 0px;
+    height: 8%;
+    width: 35%;
+    padding: 0% 1%;
+    font-size: 1.2em;
+}
+.list-item{
+    color: crimson;
+    background-color: whitesmoke;
+    padding: 1%;
+    box-shadow: 1px 1px 8px 0px #232323;
+}
+
+.suggestionslist > li:nth-child(even){
+    transform: skew(5deg);
+}
+.suggestionslist > li:nth-child(odd){
+    transform: skew(-5deg);
+}
