@@ -1,4 +1,5 @@
 document.getElementById("ErrorMsg").innerText = "Fetching Data..";
+let debounceTimerId;
 const countriesList = [];
 const countriesPromise = fetch(
   "https://gist.githubusercontent.com/Goles/3196253/raw/9ca4e7e62ea5ad935bb3580dc0a07d9df033b451/CountryCodes.json"
@@ -13,16 +14,18 @@ countriesPromise.then( resp => resp.json() )
 });
 
 function searchData(searchKey) {
-  //perform throttling here...
-  if (searchKey.length > 2) {
-    filterSearch(searchKey);
-  }
+  //perform debouncing here...
+  clearTimeout(debounceTimerId);
+  debounceTimerId = setTimeout(filterSearch , 500 , searchKey);
 }
 
 function filterSearch(searchKey) {
-    const countryList = countriesList.filter(country =>
-      country.name.toLowerCase().includes(searchKey.toLowerCase())
-    );
+    if (searchKey === ''){
+        document.getElementById("searchInputList").innerHTML = "";
+    }
+      const countryList = countriesList.filter(country =>
+        country.name.toLowerCase().includes(searchKey.toLowerCase())
+      );
     const htmlToSet = countryList.map(country => {
         return `<li class="list-item">${country.name} - ${country.code}</li>`
     });
