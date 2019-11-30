@@ -1,0 +1,32 @@
+body{
+    background-color: #3F51B5;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    display: flex;
+}
+#maincontent{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#maincontent > p{
+    font-weight: lighter;
+}
+
+#maincontent > p:nth-child(1) {
+    font-size: 3em;
+} 
+
+#maincontent > p:nth-child(2) {
+    font-size: 2em;
+} 
+
+#maincontent > p:nth-child(3) {
+    font-size: 2em;
+} 
+.vp-controls{
+    display: flex;
+}
