@@ -29,4 +29,9 @@ body{
 } 
 .vp-controls{
     display: flex;
+    position: relative;
+    bottom: 50px;
+}
+.vp-controls > * {
+    padding:1.5%;
 }

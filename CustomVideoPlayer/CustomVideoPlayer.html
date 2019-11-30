@@ -10,9 +10,9 @@
     <div id="maincontent">
         <p>Custom Video Player</p>
         <div class="vid-player">
-            <video id="video-player" autoplay src="video.mp4" ></video>
+            <video id="video-player" onclick="toggleVideo()" autoplay src="video.mp4" ></video>
             <div class="vp-controls">
-                <div onclick="toggleVideo()" ><i class="fa fa-play fa-lg"></i> </div>
+                <div onclick="toggleVideo()" ><i id="playIcon" class="fa fa-play fa-lg"></i> </div>
                 <div><i class="fa fa-pause fa-lg"></i> </div>
                 <!-- <div><i class="fa fa-play fa-lg"></i> </div> -->
             </div>
