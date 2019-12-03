@@ -33,5 +33,18 @@ body{
     bottom: 50px;
 }
 .vp-controls > * {
-    padding:1.5%;
+    margin:1.5%;
+}
+.volume-controls{
+    margin-top: 10px;
+}
+.duration-bar{
+    width: 10%;
+    background-color: red;
+    height: 100%;
+}
+.duration-controls{
+    flex: 1 auto;
+    background-color: white;
+    height: 2px;
 }

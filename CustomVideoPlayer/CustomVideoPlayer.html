@@ -13,10 +13,16 @@
             <video id="video-player" onclick="toggleVideo()" autoplay src="video.mp4" ></video>
             <div class="vp-controls">
                 <div onclick="toggleVideo()" ><i id="playIcon" class="fa fa-play fa-lg"></i> </div>
-                <div>
+                <div class="volume-controls">
                     <i id="volumeIcon" class="fa fa-volume-up fa-lg"></i>
                     <input type="range" min="0" onchange="toggleVolume()" id="volumeSlider" max="100" value="100">
-                 </div>
+                </div>
+                <div class="duration-controls">
+                    <!-- <i id="volumeIcon" class="fa fa-volume-up fa-lg"></i> -->
+                    <div class="duration-bar"></div>
+                </div>
+                <div onclick="toggleVideo()"><i id="playIcon" class="fa fa-play fa-lg"></i> </div>
+                <div onclick="toggleVideo()"><i id="playIcon" class="fa fa-play fa-lg"></i> </div>
                 <!-- <div><i class="fa fa-play fa-lg"></i> </div> -->
             </div>
         </div>
